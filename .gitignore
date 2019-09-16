@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+# compiled test file
+dist/global-this.test.js
+
+commit-msg.txt
+diff.txt
