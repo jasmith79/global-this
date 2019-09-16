@@ -1,0 +1,40 @@
+{
+  "name": "@jasmith79/global-this",
+  "version": "0.0.1",
+  "description": "Polyfills the globalThis meta-object reference for Typescript/Javascript",
+  "main": "dist/global-this.js",
+  "scripts": {
+    "test": "jest",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:ts && npm run gen-docs",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:ts": "tsc --outDir ./dist",
+    "build:docs": "typedoc --readme README.md --excludeNotExported --ignoreCompilerErrors --exclude '{**/*spec*,**/node_modules/**,**/spec/**}' --out docs ./src",
+    "no-jekyll": "touch docs/.nojekyll",
+    "gen-docs": "npm run build:docs && npm run no-jekyll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasmith79/global-this.git"
+  },
+  "keywords": [
+    "globalThis",
+    "global",
+    "window"
+  ],
+  "author": "jasmith79",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasmith79/global-this/issues"
+  },
+  "homepage": "https://github.com/jasmith79/global-this#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.1.0",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.3"
+  }
+}
